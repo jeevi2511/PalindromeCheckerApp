@@ -7,15 +7,15 @@ public class PalindromeCheckerApp {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a string: ");
-        String str = sc.nextLine();
+        String input = sc.nextLine();
 
-        String rev = "";
+        String reversed = "";
 
-        for (int i = str.length() - 1; i >= 0; i--) {
-            rev = rev + str.charAt(i);
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed = reversed + input.charAt(i);
         }
 
-        if (str.equals(rev)) {
+        if (input.equals(reversed)) {
             System.out.println("Palindrome: True");
         } else {
             System.out.println("Palindrome: False");
