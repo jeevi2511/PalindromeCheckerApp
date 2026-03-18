@@ -1,16 +1,13 @@
-import java.util.*;
-
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
-        String input = "madam";
-        boolean result = check(input, 0, input.length() - 1);
-        System.out.println("Input: " + input);
-        System.out.println("Is Palindrome? : " + result);
-    }
+        String input = "level";
 
-    public static boolean check(String s, int start, int end) {
-        if (start >= end) return true;
-        if (s.charAt(start) != s.charAt(end)) return false;
-        return check(s, start + 1, end - 1);
+        PalindromeStrategy strategy = new StackStrategy();
+
+        System.out.println("Input : " + input);
+        System.out.println("Using Stack Strategy - Is Palindrome? : " + strategy.check(input));
+
+        strategy = new DequeStrategy();
+        System.out.println("Using Deque Strategy - Is Palindrome? : " + strategy.check(input));
     }
 }
